@@ -1,0 +1,17 @@
+<h2>Actual todos</h2>
+
+<ul class="todos">
+    <% @todos.each do |todo|  %>
+    <li>
+        <%= todo.name %>
+    </li>
+    <% end %>
+</ul>
+
+<h2>Create todo</h2>
+
+<%= form_for @todo do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Submit" %>
+<% end %>
